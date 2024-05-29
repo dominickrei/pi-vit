@@ -1,0 +1,73 @@
+TRAIN:
+  ENABLE: True
+  FINETUNE: True
+  DATASET: ntu # smarthome or ntu
+  BATCH_SIZE: 64
+  EVAL_PERIOD: 5
+  CHECKPOINT_FILE_PATH: /path/to/kinetics/pretrained/model
+  CHECKPOINT_PERIOD: 15
+  AUTO_RESUME: False
+DATA:
+  UNIFORM_SAMPLING: True # Uniform sampling for NTU (if true, SAMPLING_RATE has no effect)
+  PATH_TO_DATA_DIR: /path/to/data/ # Path to train/val/test csvs
+  NUM_FRAMES: 16 # Number of frames sampled
+  ENSEMBLE_METHOD: 'max'
+  SAMPLING_RATE: 32
+  TRAIN_JITTER_SCALES: [256, 320]
+  TRAIN_CROP_SIZE: 224
+  TEST_CROP_SIZE: 224
+  INPUT_CHANNEL_NUM: [3]
+  PATH_LABEL_SEPARATOR: "," # Assumes csv
+EXPERIMENTAL:
+  # After which layers to place 3D-SIM, 0 indexed
+  LAYERS_POS_GLOBAL_ALIGN_3DSIM: [11] # Global alignment
+  # After which layers to place 2D-SIM, 0 indexed
+  LAYERS_2DSIM: []
+  NUM_JOINTS: 25 # Number of joints in the skeleton. 13 for Smarthome 25 for NTU
+  # path to hyperformer features (i.e., the features extracted from the skeleton data using the hyperformer model)
+  HYPERFORMER_FEATURES_PATH: '/path/to/features/'
+LOSS_SCALE:
+  CLS_SCALE: 1.0 # the scale for the classification loss
+  SCALE_3DSIM_ALIGN: 1.0 # (3D-SIM) alignment between skeleton and visual features
+  SCALE_3DSIM_CLS: 1.0 # (3D-SIM) classification head of 3D-SIM
+  SCALE_2DSIM: 1.6 # (2D-SIM)
+TIMESFORMER:
+  ATTENTION_TYPE: 'divided_space_time'
+  DEPTH: 12
+  PRETRAINED_MODEL: ''
+WANDB:
+  # WANDB works for this project, just need to login and enable it here
+  ENABLE: False
+  PROJECT_NAME: PI-VIT
+  EXPERIMENT_NAME: 'sh-cs_3dsim-global12-2dsim1'
+  SAVE_LAST_CHECKPOINT: True
+  SAVE_OPTIMIZER_STATE: False
+SOLVER:
+  BASE_LR: 0.005
+  LR_POLICY: steps_with_relative_lrs
+  STEPS: [0, 11, 14]
+  LRS: [1, 0.1, 0.01]
+  MAX_EPOCH: 15
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 1e-4
+  OPTIMIZING_METHOD: sgd
+MODEL:
+  MODEL_NAME: pivit
+  NUM_CLASSES: 60 # 31 for cross-subject (CS) / 19 for cross-view (CV1,CV2). 60/120 for NTU
+  ARCH: vit
+  LOSS_FUNC: pivit_loss
+  DROPOUT_RATE: 0.5
+TEST:
+  ENABLE: True
+  EVAL_PROTOCOL: 'cls_only'
+  DATASET: ntu
+  BATCH_SIZE: 64
+  NUM_ENSEMBLE_VIEWS: 10
+  NUM_SPATIAL_CROPS: 1
+DATA_LOADER:
+  NUM_WORKERS: 8
+  PIN_MEMORY: True
+NUM_GPUS: 8
+NUM_SHARDS: 1
+RNG_SEED: 40
+OUTPUT_DIR: ./
