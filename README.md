@@ -65,7 +65,7 @@ We provide configs for training $\pi$-ViT on Smarthome and NTU in [configs/](con
 ### Training
 Download the necessary pretrained models (Kinetics-400 for Smarthome and SSv2 for NTU) from [this link](https://github.com/facebookresearch/TimeSformer?tab=readme-ov-file#model-zoo) and update `TRAIN.CHECKPOINT_FILE_PATH` to point to the downloaded model.
 
-To train $\pi$-ViT on Smarthome using 8 GPUs run the following command:
+For example to train $\pi$-ViT on Smarthome using 8 GPUs run the following command:
 
 `python tools/run_net.py --cfg configs/Smarthome/PIViT_Smarthome.yaml NUM_GPUS 8`
 
@@ -80,11 +80,9 @@ $\pi$-ViT | NTU-60 CV | - | 92.9 | [link]() |
 $\pi$-ViT | NTU-120 CS | - | 94.0 | [link]() |
 $\pi$-ViT | NTU-120 CSet | - | 97.9 | [link]() |
 
-After downloading a pretrained model, evaluate it using 
+After downloading a pretrained model, evaluate it using the command:
 
-
-Our primary contributions can be found in:
-- [train_net.py](tools/train_net.py), [pivit.py](timesformer/models/pivit.py), [pivit_modules.py](timesformer/models/pivit_modules.py), [losses.py](timesformer/models/losses.py), [smarthome.py](timesformer/datasets/smarthome.py), [ntu.py](timesformer/datasets/ntu.py)
+`python tools/run_net.py --cfg configs/Smarthome/PIViT_Smarthome.yaml NUM_GPUS 8 TEST.CHECKPOINT_FILE_PATH /path/to/downloaded/model TRAIN.ENABLE False`
 
 ## Citation & Acknowledgement
 ```
@@ -95,5 +93,7 @@ Our primary contributions can be found in:
     year={2024}
 }
 ```
+Our primary contributions can be found in:
+- [train_net.py](tools/train_net.py), [pivit.py](timesformer/models/pivit.py), [pivit_modules.py](timesformer/models/pivit_modules.py), [losses.py](timesformer/models/losses.py), [smarthome.py](timesformer/datasets/smarthome.py), [ntu.py](timesformer/datasets/ntu.py)
 
 This repository is built on top of [TimeSformer](https://github.com/facebookresearch/TimeSformer).
