@@ -83,7 +83,7 @@ $\pi$-ViT | Smarthome CV2 | 64.8 | - | [link]() |
 $\pi$-ViT | NTU-120 CS | - | 91.9 | [link]() |
 $\pi$-ViT | NTU-120 CSetup | - | 92.9 | [link]() |
 $\pi$-ViT | NTU-60 CS | - | 94.0 | [link]() |
-$\pi$-ViT | NTU-60 CSet | - | 97.9 | [link]() |
+$\pi$-ViT | NTU-60 CV | - | 97.9 | [link]() |
 
 After downloading a pretrained model, evaluate it using the command:
 
