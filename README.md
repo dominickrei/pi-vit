@@ -80,10 +80,10 @@ For example to train $\pi$-ViT on Smarthome using 8 GPUs run the following comma
 $\pi$-ViT | Smarthome CS | 72.9 | - | [link]() |
 $\pi$-ViT | Smarthome CV1 | 55.2 | - | [link]() |
 $\pi$-ViT | Smarthome CV2 | 64.8 | - | [link]() |
-$\pi$-ViT | NTU-60 CS | - | 91.9 | [link]() |
-$\pi$-ViT | NTU-60 CV | - | 92.9 | [link]() |
-$\pi$-ViT | NTU-120 CS | - | 94.0 | [link]() |
-$\pi$-ViT | NTU-120 CSet | - | 97.9 | [link]() |
+$\pi$-ViT | NTU-120 CS | - | 91.9 | [link]() |
+$\pi$-ViT | NTU-120 CSetup | - | 92.9 | [link]() |
+$\pi$-ViT | NTU-60 CS | - | 94.0 | [link]() |
+$\pi$-ViT | NTU-60 CSet | - | 97.9 | [link]() |
 
 After downloading a pretrained model, evaluate it using the command:
 
