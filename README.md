@@ -77,13 +77,13 @@ For example to train $\pi$-ViT on Smarthome using 8 GPUs run the following comma
 ### Testing
 | Model | Dataset | mCA | Top-1 | Download (soon) |
 | --- | --- | --- | --- | --- |
-$\pi$-ViT | Smarthome CS | 72.9 | - | [link]() |
-$\pi$-ViT | Smarthome CV1 | 55.2 | - | [link]() |
-$\pi$-ViT | Smarthome CV2 | 64.8 | - | [link]() |
-$\pi$-ViT | NTU-120 CS | - | 91.9 | [link]() |
-$\pi$-ViT | NTU-120 CSetup | - | 92.9 | [link]() |
-$\pi$-ViT | NTU-60 CS | - | 94.0 | [link]() |
-$\pi$-ViT | NTU-60 CV | - | 97.9 | [link]() |
+$\pi$-ViT | Smarthome CS | 72.9 | - | [HuggingFace]() |
+$\pi$-ViT | Smarthome CV1 | 55.2 | - | [HuggingFace]() |
+$\pi$-ViT | Smarthome CV2 | 64.8 | - | [HuggingFace]() |
+$\pi$-ViT | NTU-120 CS | - | 91.9 | [HuggingFace](https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/blob/main/NTU120_CS_pivit.pyth) |
+$\pi$-ViT | NTU-120 CSetup | - | 92.9 | [HuggingFace](https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/blob/main/NTU120_CSet_pivit.pyth) |
+$\pi$-ViT | NTU-60 CS | - | 94.0 | [HuggingFace](https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/blob/main/NTU60_CS_pivit.pyth) |
+$\pi$-ViT | NTU-60 CV | - | 97.9 | [HuggingFace](https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/blob/main/NTU60_CV_pivit.pyth) |
 
 After downloading a pretrained model, evaluate it using the command:
 
