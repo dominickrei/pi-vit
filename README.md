@@ -1,7 +1,7 @@
-# Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living
+# Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living. [[Paper]](https://arxiv.org/abs/2311.18840)
 ![intro](intro_graphic.png)
 
-This is the official code for the CVPR 2024 paper titled "Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living" [[arxiv]](https://arxiv.org/abs/2311.18840)
+This is the official code for the CVPR 2024 paper titled "Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living"
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/just-add-p-pose-induced-video-transformers/action-classification-on-toyota-smarthome)](https://paperswithcode.com/sota/action-classification-on-toyota-smarthome?p=just-add-p-pose-induced-video-transformers) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/just-add-p-pose-induced-video-transformers/action-recognition-in-videos-on-ntu-rgbd)](https://paperswithcode.com/sota/action-recognition-in-videos-on-ntu-rgbd?p=just-add-p-pose-induced-video-transformers) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/just-add-p-pose-induced-video-transformers/action-recognition-in-videos-on-ntu-rgbd-120)](https://paperswithcode.com/sota/action-recognition-in-videos-on-ntu-rgbd-120?p=just-add-p-pose-induced-video-transformers)
 
