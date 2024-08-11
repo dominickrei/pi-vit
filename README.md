@@ -1,4 +1,7 @@
-# Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living. [[Paper]](https://arxiv.org/abs/2311.18840)
+# Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living. 
+
+[[Paper]](https://arxiv.org/abs/2311.18840) [[Pretrained models]](https://github.com/dominickrei/pi-vit/?tab=readme-ov-file#testing)
+
 ![intro](intro_graphic.png)
 
 This is the official code for the CVPR 2024 paper titled "Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living"
@@ -75,7 +78,7 @@ For example to train $\pi$-ViT on Smarthome using 8 GPUs run the following comma
 `python tools/run_net.py --cfg configs/Smarthome/PIViT_Smarthome.yaml NUM_GPUS 8`
 
 ### Testing
-| Model | Dataset | mCA | Top-1 | Download (soon) |
+| Model | Dataset | mCA | Top-1 | Downloads |
 | --- | --- | --- | --- | --- |
 $\pi$-ViT | Smarthome CS | 72.9 | - | [HuggingFace]() |
 $\pi$-ViT | Smarthome CV1 | 55.2 | - | [HuggingFace]() |
