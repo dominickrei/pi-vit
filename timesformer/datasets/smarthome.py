@@ -364,7 +364,8 @@ class Smarthome(torch.utils.data.Dataset):
                 )
 
             if self.mode in ['train', 'val', 'test']:
-                video_identifier = os.path.split(self._path_to_videos[index])[-1][:-4] + '_pose3d.json'
+                # video_identifier = os.path.split(self._path_to_videos[index])[-1][:-4] + '_pose3d.json'
+                video_identifier = os.path.splitext(os.path.basename(self._path_to_videos[index]))[0]
                 # hyperformer_logits = self._hyperformer_logits[video_identifier]
                 # return frames, keypoint_attention_mask, label, hyperformer_logits, index, {}
                 if self._hyperformer_feature_path is not '':
