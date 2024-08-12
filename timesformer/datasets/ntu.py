@@ -367,7 +367,8 @@ class Ntu(torch.utils.data.Dataset):
 
             # Get logits from hyperformer
             if self.mode in ['train', 'val', 'test']:
-                video_identifier = os.path.split(self._path_to_videos[index])[-1][:-8]
+                # video_identifier = os.path.split(self._path_to_videos[index])[-1][:-8]
+                video_identifier = os.path.splitext(os.path.basename(self._path_to_videos[index]))[0]
                 # hyperformer_logits = self._hyperformer_logits[video_identifier]
                 # return frames, keypoint_attention_mask, label, hyperformer_logits, index, {}
                 # hyperformer_features = self._hyperformer_features[video_identifier]
