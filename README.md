@@ -92,6 +92,28 @@ After downloading a pretrained model, evaluate it using the command:
 
 `python tools/run_net.py --cfg configs/Smarthome/PIViT_Smarthome.yaml NUM_GPUS 8 TEST.CHECKPOINT_FILE_PATH /path/to/downloaded/model TRAIN.ENABLE False`
 
+## Setting up skeleton features for $\pi$-ViT
+
+During training, the 3D-SIM module in $\pi$-ViT requires extracted features from a pre-trained sketon action recognition model. This means that for every video in the training set, there must be a corresponding feature vector associated with it. The features should be stored in the directory indicated by the config option  `EXPERIMENTAL.HYPERFORMER_FEATURES_PATH`.
+
+$\pi$-ViT expects a directory containing a single HDF5 file for each video in the training dataset. For example, the directory structure for Smarthome should look like this:
+```
+├── /path/to/hyperformer_features
+        ├── Cook.Cleandishes_p02_r00_v02_c03.h5
+        ├── Cook.Cleandishes_p02_r00_v14_c03.h5
+        ├── ...
+```
+
+Where `Cook.Cleandishes_p02_r00_v02_c03.h5` is a HDF5 file containing a single dataset named `data` with a shape of `400x216`. We provide a minimal example to demonstrate saving a feature vector in the format $\pi$-ViT expects:
+```
+skeleton_features = np.random.rand(400, 216)
+
+with h5py.File('random_tensor.h5', 'w') as f:
+    f.create_dataset('data', data=tensor)
+```
+
+Due to the large size of the skeleton feature datasets we do not upload them here, instead we provide the Hyperformer models pre-trained on Toyota-Smarthome in `hyperformer_models/`. NTU trained models, and details for executing the Hyperformer model, are available [here](https://github.com/ZhouYuxuanYX/Hyperformer).
+
 ## Citation & Acknowledgement
 ```
 @article{reilly2024pivit,
