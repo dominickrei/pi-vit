@@ -78,7 +78,8 @@ For example to train $\pi$-ViT on Smarthome using 8 GPUs run the following comma
 `python tools/run_net.py --cfg configs/Smarthome/PIViT_Smarthome.yaml NUM_GPUS 8`
 
 ### Testing
-| Model | Dataset | mCA | Top-1 | Downloads |
+#### All model checkpoints: https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/tree/main
+| Model | Dataset | mCA | Top-1 | Downloads (direct download) |
 | --- | --- | --- | --- | --- |
 $\pi$-ViT | Smarthome CS | 72.9 | - | [HuggingFace](https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/resolve/main/SH_CS_pivit.pyth) |
 $\pi$-ViT | Smarthome CV2 | 64.8 | - | [HuggingFace](https://huggingface.co/datasets/dreilly/pi-vit-checkpoints/resolve/main/SH_CV2_pivit.pyth) |
