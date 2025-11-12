@@ -117,7 +117,7 @@ Due to the large size of the skeleton feature datasets we do not upload them her
 @article{reilly2024pivit,
     title={Just Add $\pi$! Pose Induced Video Transformers for Understanding Activities of Daily Living},
     author={Dominick Reilly and Srijan Das},
-    booktitle={Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)}
+    booktitle={Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)},
     year={2024}
 }
 ```
